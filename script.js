@@ -1,4 +1,3 @@
-// Datos de proyectos reales de GitHub
 const projectsData = [
     {
         id: 1,
@@ -27,14 +26,6 @@ const projectsData = [
         description: "Interfaz para recepcionistas de clínica con gestión de citas y pacientes.",
         demoLink: "https://glafiraesparza.github.io/clinica/secretaria2.html",
         image: "assets/images/recepcion.jpg"
-    },
-    {
-        id: 5,
-        title: "Consultorio Médico",
-        description: "Plataforma para gestión de consultorio médico con interfaz de doctor y administración de pacientes.",
-        demoLink: "https://glafiraesparza.github.io/clinica/PrincipalMedico.html",
-        image: "assets/images/medico.jpg"
-        
     }
 ];
 
@@ -75,7 +66,7 @@ function startLoadingSequence() {
     }, 2500);
 }
 
-// Efectos de partículas mejorados
+// Efectos de partículas
 function createParticles() {
     const particlesContainer = document.getElementById('particles');
     const particleCount = 60;
@@ -113,7 +104,7 @@ function createParticles() {
         particlesContainer.appendChild(particle);
     }
     
-    // Agregar animación de partículas
+    // Animación de partículas
     const style = document.createElement('style');
     style.textContent = `
         @keyframes floatParticle {
@@ -152,7 +143,7 @@ function handleNavbarScroll() {
     }
 }
 
-// Efectos al hacer scroll - Versión simplificada
+// Efectos al hacer scroll
 function setupScrollEffects() {
     const observerOptions = {
         threshold: 0.1,
@@ -164,7 +155,7 @@ function setupScrollEffects() {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 
-                // Animación específica para barras de habilidades
+                // Animación para barras de habilidades
                 if (entry.target.classList.contains('skill-item')) {
                     const skillProgress = entry.target.querySelector('.skill-progress');
                     const skillLevel = entry.target.getAttribute('data-skill');
@@ -173,7 +164,7 @@ function setupScrollEffects() {
                     }, 300);
                 }
                 
-                // Animación escalonada para proyectos
+                // Animación 
                 if (entry.target.classList.contains('project-card')) {
                     const cards = Array.from(document.querySelectorAll('.project-card'));
                     const index = cards.indexOf(entry.target);
@@ -225,7 +216,7 @@ function setupScrollEffects() {
     }
 }
 
-// Efecto parallax mejorado - Versión simplificada
+// Efecto parallax
 function setupParallax() {
     window.addEventListener('scroll', function() {
         const scrolled = window.scrollY;
@@ -264,7 +255,6 @@ function setupParallax() {
 
 // Animaciones de habilidades
 function setupSkillAnimations() {
-    // Las barras se animan automáticamente al ser observadas
 }
 
 // Renderizar proyectos con efectos parallax
@@ -361,12 +351,12 @@ function scrollToSection(sectionId) {
     }
 }
 
-// Efecto typing para el texto "Sobre Mí"
+// Efecto typing
 function initTypingEffect() {
     const typingElement = document.getElementById('typing-text');
     if (!typingElement) return;
     
-    const text = "Desarrolladora full stack con especialización en crear experiencias digitales únicas que combinan funcionalidad técnica con diseño agradable.";
+    const text = "Desarrolladora con especialización en crear experiencias digitales que combinan funcionalidad técnica con diseño agradable.";
     let index = 0;
     let currentText = '';
     
